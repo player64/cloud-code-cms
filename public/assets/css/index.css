@@ -1,8 +1,18 @@
 @import "style.css";
 
+/* ABOUT */
+.about-cms__desc {
+    line-height: 1.6rem;
+}
+
+.about-cms__img {
+    border-radius: 50%;
+}
+
 /* Pricing */
 .pricing {
     position: relative;
+    text-align: center;
 }
 
 .pricing::before {
@@ -19,6 +29,47 @@
 .pricing__body {
     position: relative;
     z-index: 1;
+}
+
+.pricing__title {
+    text-align: center;
+}
+
+.pricing__desc {
+    line-height: 1.6rem;
+    margin-bottom: 3rem;
+}
+
+.price-option__title {
+    font-weight: 600;
+    color: var(--tertiary);
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.price-option__inner {
+    background-color: #fff;
+    border: 1px solid var(--tertiary);
+    height: 100%;
+    padding: 1.5rem;
+}
+
+.price-option__price {
+    font-size: 1.2rem;
+    color: var(--tertiary);
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--tertiary);
+}
+
+.price-option__list {
+    margin-top: 1rem;
+}
+
+.price-option__list-item:not(.price-option__list-item:last-child) {
+    line-height: 1.6rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid #d9d9d9;
 }
 
 
@@ -44,7 +95,7 @@
 
 .about-the-project__section-desc,
 .about-the-project__list-item {
-    line-height: 1.4rem;
+    line-height: 1.6rem;
 }
 
 .about-the-project__list {
