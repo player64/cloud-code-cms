@@ -1,89 +1,257 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en-GB">
+<head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
-
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/10.4.0/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/10.4.0/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/10.4.0/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/10.4.0/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/10.4.0/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/10.4.0/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/10.4.0/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/10.4.0/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/10.4.0/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/10.4.0/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
-
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+    <title>Cloud Code - The Best CMS</title>
+    <link rel="stylesheet" href="assets/css/index.css">
+</head>
+<body id="top">
+<header class="app-header">
+    <div class="app-container">
+        <div class="app-header__row">
+            <a class="app-header__branding" href="#top">
+                <span class="app-header__title">Cloud Code</span>
+                <span class="app-header__slogan">The Best CMS</span>
+            </a>
+            <nav class="main-nav">
+                <ul class="main-nav__list">
+                    <li class="main-nav__list-item">
+                        <a href="#home" class="main-nav__link">Home</a>
+                    </li>
+                    <li class="main-nav__list-item">
+                        <a href="#pricing" class="main-nav__link">Pricing</a>
+                    </li>
+                    <li class="main-nav__list-item">
+                        <a href="#company" class="main-nav__link">About</a>
+                    </li>
+                    <li class="main-nav__list-item">
+                        <a href="https://github.com/player64/cloud-code-cms"
+                           rel="nofollow" target="_blank" class="main-nav__link">
+                            <img src="assets/icons/github.svg" alt="GitHub" class="main-nav__item-ico">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+</header>
+<main class="app-main">
+    <section class="intro">
+        <img src="assets/images/main-img-resized.jpeg" width="1920" height="819" alt="Kilkenny Kickers"
+             class="intro__img">
+        <div class="intro__inner">
+            <div class="app-container">
+                <h1 class="intro__title">
+                    <span class="intro__title--slogan">Cloud Code CMS - Wise Choice</span> for Developers and Marketers
+                </h1>
+                <p class="intro__desc">Unleash Your Online Potential with Seamless Website Management and Content
+                    Creation, Tailored for Developers and Marketers.</p>
+                <button class="app-btn">Try now</button>
+            </div>
+        </div>
+    </section>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+    <section class="app-section app-section--navigable about-cms" id="home">
+        <div class="app-container">
 
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
-  </body>
+            <div class="app-row app-row--align-center">
+                <div class="app-col">
+                    <h2 class="app-section-title">About Cloud Code CMS</h2>
+                    <p>At Cloud Code CMS, we're on a mission to democratize web content management. Founded by a team of
+                        passionate developers and designers, we understand the challenges of creating and maintaining a
+                        compelling online presence. Our CMS platform is designed to empower individuals and businesses
+                        of all sizes, offering the tools you need to succeed in the digital world.</p>
+                    <ul class="feature-list">
+                        <li class="feature-list__item">
+                            <strong>Cloud Code CMS</strong> is a powerful and user-friendly Content Management System
+                            (CMS) designed to
+                            simplify website and content management. It's the perfect solution for bloggers, small
+                            businesses, and content creators looking to create, edit, and publish content effortlessly.
+                        </li>
+                        <li class="feature-list__item">
+                            With Cloud Code CMS, you can easily customize your website with a variety of templates and
+                            themes, collaborate with team members, and optimize your content for SEO. Say goodbye to
+                            coding hassles and focus on what matters most—creating engaging content.
+                        </li>
+                        <li class="feature-list__item">
+                            Our intuitive drag-and-drop interface, real-time previews, and seamless hosting make website
+                            management a breeze. Whether you're a seasoned developer or a novice, Cloud Code CMS
+                            empowers you to build and maintain a professional online presence with ease.
+                        </li>
+                    </ul>
+                </div>
+                <div class="app-col">
+                    <figure class="about-cms__img-wrapper">
+                        <img class="about-cms__img" src="assets/images/about-cms.jpeg"
+                             width="600" height="600" alt="About Cloud Code CMS">
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="app-section app-section--navigable pricing" id="pricing">
+        <div class="app-container pricing__body">
+            <h1 class="app-section-title">Pricing</h1>
+            <p class="pricing__desc">
+                At Cloud Code CMS, we offer flexible pricing options to suit your needs, whether you're just starting
+                your online journey or looking to unlock premium features. Our pricing plans are designed to provide you
+                with the tools and support necessary to create and manage a stunning website effortlessly. Choose the
+                plan that aligns with your goals and budget, and take full advantage of the Cloud Code CMS platform.
+                Here's a breakdown of our pricing options:
+            </p>
+
+            <div class="app-row">
+                <div class="app-col">
+                    <h3 class="pricing__title">Free Plan</h3>
+                    <div class="pricing__price">Forever Free</div>
+                    <ul class="feature-list">
+                        <li class="feature-list__item">Up to 10 Website Pages</li>
+                        <li class="feature-list__item">Subdomain Hosting (yourname.cloudcodecms.com)</li>
+                        <li class="feature-list__item">Basic Themes</li>
+                        <li class="feature-list__item">Standard Content Editing</li>
+                        <li class="feature-list__item">Forum Support</li>
+                        <li class="feature-list__item">Periodic Updates</li>
+                        <li class="feature-list__item">Ad-Supported</li>
+                    </ul>
+                </div>
+                <div class="app-col">
+                    <h3 class="pricing__title">Commercial Plan</h3>
+                    <div class="pricing__price">€9/month</div>
+                    <ul class="feature-list">
+                        <li class="feature-list__item">Unlimited Website Pages</li>
+                        <li class="feature-list__item">Custom Domain Integration</li>
+                        <li class="feature-list__item">Access to Premium Themes</li>
+                        <li class="feature-list__item">Standard Content Editing</li>
+                        <li class="feature-list__item">SEO Optimization Tools</li>
+                        <li class="feature-list__item">Content Collaboration</li>
+                        <li class="feature-list__item">24/7 Customer Support</li>
+                        <li class="feature-list__item">Regular Updates and Security</li>
+                        <li class="feature-list__item">No Ads</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="app-section app-section--navigable about-the-project" id="company">
+        <div class="app-container">
+            <h1 class="app-section-title">About the project</h1>
+
+            <div class="about-the-project__body">
+                <div class="about-the-project__section">
+                    <h2 class="about-the-project__section-title">Overview:</h2>
+                    <p class="about-the-project__section-desc">
+                        <strong>This project is a fictional</strong> endeavour created for educational purposes,
+                        showcasing a website built using static HTML and pure CSS, with hosting provided by Firebase.
+                    </p>
+                </div>
+
+                <div class="about-the-project__section">
+                    <h2 class="about-the-project__section-title">Technical Details:</h2>
+                    <ul class="about-the-project__list">
+                        <li class="about-the-project__list-item">The website is developed and tested for desktop use
+                            only, optimized for screens with a minimum width of 1200 pixels for the best viewing
+                            experience.
+                        </li>
+                        <li class="about-the-project__list-item">
+                            The website is built using static HTML and CSS for a clean design.
+                        </li>
+                        <li class="about-the-project__list-item">
+                            Firebase hosts the website, ensuring fast and reliable access for visitors.
+                        </li>
+                        <li class="about-the-project__list-item">
+                            GitHub's actions are used to deploy the project to Firebase.
+                        </li>
+                        <li class="about-the-project__list-item">
+                            The source code is available on
+                            <a class="credit-link" target="_blank" rel="nofollow"
+                               href="https://github.com/player64/kilkenny-kickers/">
+                                GitHub
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="about-the-project__section">
+                    <h2 class="about-the-project__section-title">Disclaimer:</h2>
+                    <p class="about-the-project__section-desc">
+                        <strong>This project is entirely fictional</strong> and is not affiliated with any real company.
+                        It is created solely for educational purposes to demonstrate web development skills and
+                        <strong>
+                            does not represent any real company, offers, organization, or entity.
+                        </strong>
+                    </p>
+                </div>
+
+                <div class="about-the-project__section">
+                    <h2 class="about-the-project__section-title">Credits:</h2>
+                    <ul class="about-the-project__list">
+                        <li class="about-the-project__list-item">
+                            <span class="credit-desc">Images:</span>
+                            <ul class="about-the-project__list">
+                                <li class="about-the-project__list-item">
+                                    <a class="credit-link" href="https://www.pexels.com/" target="_blank"
+                                       rel="nofollow">
+                                        Pexels
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="about-the-project__list-item">
+                            <span class="credit-desc">Icons:</span>
+                            <a class="credit-link" href="https://remixicon.com/" target="_blank" rel="nofollow">
+                                Remix Icon
+                            </a>
+                        </li>
+                        <li class="about-the-project__list-item">
+                            <span class="credit-desc">Colour pallet:</span>
+                            <a class="credit-link" href="https://coolors.co/" target="_blank" rel="nofollow">
+                                Coolors
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</main>
+<footer class="app-footer">
+    <div class="app-container">
+        <nav class="social-nav">
+            <p class="social-nav__desc">Follow us on</p>
+            <ul class="social-nav__list">
+                <li class="social-nav__list-item">
+                    <a href="https://github.com/player64/cloud-code-cms"
+                       rel="nofollow" target="_blank" class="social-nav__link">
+                        <img src="assets/icons/github.svg" alt="GitHub" class="social-nav__ico">
+                    </a>
+                </li>
+                <li class="social-nav__list-item">
+                    <a href="https://linkedin.com" rel="nofollow" target="_blank" class="social-nav__link">
+                        <img src="assets/icons/linkedin.svg" alt="LinkedIn" class="social-nav__ico">
+                    </a>
+                </li>
+                <li class="social-nav__list-item">
+                    <a href="https://twitter.com" rel="nofollow" target="_blank" class="social-nav__link">
+                        <img src="assets/icons/twitter.svg" alt="LinkedIn" class="social-nav__ico">
+                    </a>
+                </li>
+                <li class="social-nav__list-item">
+                    <a href="https://facebook.com" rel="nofollow" target="_blank" class="social-nav__link">
+                        <img src="assets/icons/facebook.svg" alt="Facebook" class="social-nav__ico">
+                    </a>
+                </li>
+                <li class="social-nav__list-item">
+                    <a href="https://reddit.com" rel="nofollow" target="_blank" class="social-nav__link">
+                        <img src="assets/icons/reddit.svg" alt="Reddit" class="social-nav__ico">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</footer>
+</body>
 </html>
