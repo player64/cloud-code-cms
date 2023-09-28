@@ -59,17 +59,24 @@
     color: var(--tertiary);
     padding-bottom: 1rem;
     border-bottom: 1px solid var(--tertiary);
+    margin: 0 -1.5rem
 }
 
 .price-option__list {
     margin-top: 1rem;
 }
 
-.price-option__list-item:not(.price-option__list-item:last-child) {
+.price-option__list-item {
     line-height: 1.6rem;
     padding-bottom: 0.5rem;
-    margin-bottom: 0.5rem;
+    margin: 0 -1.5rem 0.5rem -1.5rem;
     border-bottom: 1px solid #d9d9d9;
+}
+
+.price-option__list-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
 }
 
 
